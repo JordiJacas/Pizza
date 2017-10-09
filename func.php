@@ -10,58 +10,59 @@
         $preu_total = 5;
     		
         if(isset($_POST['0'])) {
-          $text = $text." Massa";
+          $text = $text." Massa<br>";
           $preu_total +=0.5;
 
           if(isset($_POST['1'])) {
-          $text = $text . " Oregan";
+          $text = $text . " Oregan<br>";
           $preu_total +=0.5;
 
             if(isset($_POST['2'])) {
-              $text = $text . " Queso";
+              $text = $text . " Queso<br>";
               $preu_total +=0.5;
             }
             if(isset($_POST['3'])) {
-              $text = $text . " Tomate";
+              $text = $text . " Tomate<br>";
               $preu_total +=0.5;
             }
             if(isset($_POST['4'])) {
-              $text = $text . " Atun";
+              $text = $text . " Atun<br>";
               $preu_total +=0.5;
             }
             if(isset($_POST['5'])) {
-              $text = $text . " Piña";
+              $text = $text . " Piña<br>";
               $preu_total +=0.5;
             }
             if(isset($_POST['6'])) {
-              $text = $text . " Maiz";
+              $text = $text . " Maiz<br>";
               $preu_total +=0.5;
             }
             if(isset($_POST['7'])) {
-              $text = $text . " Pollo";
+              $text = $text . " Pollo<br>";
               $preu_total +=0.5;
             }
             if(isset($_POST['8'])) {
-              $text = $text . " Pimiento";
+              $text = $text . " Pimiento<br>";
               $preu_total +=0.5;
             }
             if(isset($_POST['9'])) {
-              $text = $text . " Salchicas";
+              $text = $text . " Salchicas<br>";
               $preu_total +=0.5;
             }
-
-
-
-          }else{
-            $text = "El oregan es necessari.";
-          }
-        }else{
-          $text = "La massa es necessaria.";
-        }
 
             echo "<h1>Has demanat una pizza amb el següents ingredients</h1>";
             echo $text ."<br>";
             echo "El preu total de la pizza és ". $preu_total;
-    ?>
+  
+
+
+          }else{
+            echo "<h4>La pizza ha d'incloure massa</h4>";
+          }
+        }else{
+          echo "<h4>La pizza ha d'incloure oregan</h4>";
+        }
+  ?>
+
   </body>
 </html>
