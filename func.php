@@ -57,10 +57,10 @@
 
 
           }else{
-            echo "<h4>La pizza ha d'incloure massa</h4>";
+            echo "<h4>La pizza ha d'incloure oregan</h4>";
           }
         }else{
-          echo "<h4>La pizza ha d'incloure oregan</h4>";
+          echo "<h4>La pizza ha d'incloure massa</h4>";
         }
   ?>
 
