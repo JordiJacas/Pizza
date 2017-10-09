@@ -6,50 +6,62 @@
   </head>
   <body>
   	<?php
-      $text = " ";
-  		if(isset($_POST['massa'])) {
-        $text = $text." Massa";
+        $text = " ";
+        $preu_total = 5;
+    		
+        if(isset($_POST['0'])) {
+          $text = $text." Massa";
+          $preu_total +=0.5;
 
-      if(isset($_POST['oregan'])) {
-        $text = $text . " Oregan";
+          if(isset($_POST['1'])) {
+          $text = $text . " Oregan";
+          $preu_total +=0.5;
 
-        if(isset($_POST['queso'])) {
-        $text = $text . " Queso";
-        }
-        if(isset($_POST['tomate'])) {
-          $text = $text . " Tomate";
-        }
-        if(isset($_POST['atun'])) {
-          $text = $text . " Atun";
-        }
-        if(isset($_POST['piña'])) {
-          $text = $text . " Piña";
-        }
-        if(isset($_POST['maiz'])) {
-          $text = $text . " Maiz";
-        }
-        if(isset($_POST['pollo'])) {
-          $text = $text . " Pollo";
-        }
-        if(isset($_POST['pimiento'])) {
-          $text = $text . " Pimiento";
-        }
-        if(isset($_POST['bacon'])) {
-          $text = $text . " Bacon";
-        }
-        if(isset($_POST['Salchichas'])) {
-          $text = $text . " Salchicas";
-        }
-      }else{
-        $text = "El oregan es necessari.";
-      }
-      
-      }else{
-        $text = "La massa es necessaria.";
-      }
+            if(isset($_POST['2'])) {
+              $text = $text . " Queso";
+              $preu_total +=0.5;
+            }
+            if(isset($_POST['3'])) {
+              $text = $text . " Tomate";
+              $preu_total +=0.5;
+            }
+            if(isset($_POST['4'])) {
+              $text = $text . " Atun";
+              $preu_total +=0.5;
+            }
+            if(isset($_POST['5'])) {
+              $text = $text . " Piña";
+              $preu_total +=0.5;
+            }
+            if(isset($_POST['6'])) {
+              $text = $text . " Maiz";
+              $preu_total +=0.5;
+            }
+            if(isset($_POST['7'])) {
+              $text = $text . " Pollo";
+              $preu_total +=0.5;
+            }
+            if(isset($_POST['8'])) {
+              $text = $text . " Pimiento";
+              $preu_total +=0.5;
+            }
+            if(isset($_POST['9'])) {
+              $text = $text . " Salchicas";
+              $preu_total +=0.5;
+            }
 
 
-      echo $text;
+
+          }else{
+            $text = "El oregan es necessari.";
+          }
+        }else{
+          $text = "La massa es necessaria.";
+        }
+
+            echo "<h1>Has demanat una pizza amb el següents ingredients</h1>";
+            echo $text ."<br>";
+            echo "El preu total de la pizza és ". $preu_total;
     ?>
   </body>
 </html>

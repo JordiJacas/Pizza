@@ -5,19 +5,29 @@
     <title></title>
   </head>
   <body>
-  	<form method="post" action="func.php">
-  		Massa: <input type="checkbox" name="massa" value="Massa"><br>
-  		Oregan: <input type="checkbox" name="oregan" value="oregan"><br>
-  		Queso: <input type="checkbox" name="queso" value="queso"><br>
-  		Tomate: <input type="checkbox" name="tomate" value="tomate"><br>
-  		Atun: <input type="checkbox" name="atun" value="atun"><br>
-  		Piña: <input type="checkbox" name="piña" value="piña"><br>
-  		Maiz: <input type="checkbox" name="maiz" value="maiz"><br>
-  		Pollo: <input type="checkbox" name="pollo" value="pollo"><br>
-  		Pimiento: <input type="checkbox" name="pimiento" value="pimiento"><br>
-  		Bacon: <input type="checkbox" name="bacon" value="bacon"><br>
-  		Salchicas: <input type="checkbox" name="salchichas"value="salchichas"><br><br>
-  		<input type="submit" name="button" value="Pedir Pizza"><br>
-  	</form>
+  	<?php
+  		$ingredients = array(
+  			0 => 'Massa',
+  			1 => 'Oregan',
+  			2 => 'Queso',
+  			3 => 'Tomate',
+  			4 => 'Atun',
+  			5 => 'Piña',
+  			6 => 'Maiz',
+  			7 => 'Pollo',
+  			8 => 'Bacon',
+  			9 => 'salchichas');
+  		$longitud = sizeof($ingredients);
+  		echo "<form method='post' action='func.php'>";
+  			for($i=0;$i<$longitud;$i++){
+  				echo "<p>".$ingredients[$i]."<input type='checkbox' name='".$i."' value='".$i."'></p>";
+  			}
+
+  		echo "<input type='submit' value='Pedir'>";
+  	?>
+
+
+
+
   </body>
 </html>
